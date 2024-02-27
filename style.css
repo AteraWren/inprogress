@@ -1,5 +1,5 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :focus {
@@ -7,42 +7,62 @@
 }
 
 body {
-  /* TODO */
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, orange, orangered);
+  background-color: orange;
 }
 
 input {
+/* position:fixed; */
+  background-color: rgb(239, 184, 81);  
+  border-color: orangered;
+  padding: 1%;
+  border:1px;
+  border-radius: 2%;
  /* TODO */
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100%;
+}
 .search-container {
- /* TODO */
-}
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
-}
-.search-container input {
- /* TODO */
-}
-.search-container .suggestions {
-   /* TODO */
+  position: relative;
+  max-width: 400px;
 }
 
 ul {
-  /* TODO */
-}
-ul.has-suggestions {
-  /* TODO */
+  position: absolute;
+  background-color: rgb(239, 184, 81);
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  border-top:none;
+  border: 1px solid rgb(227, 122, 18);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  top: calc(100% + 5px);
+  width: 100%;
+  /* max-height: 100%; */
+  
+
+ 
 }
 ul li {
+  
   /* TODO */
 }
 ul li:hover {
-  background-color: lightgray;
-  font-weight: bold;
-  /* TODO */
+cursor: pointer;}
+.highlighted {
+  background-color:orangered;
 }
-
-input {
-   /* TODO */
+.suggestions  {
+  overflow-y:auto;
+  /* position:fixed; */
+  top: 53%;
+  max-height: 200px;
+  width:inherit;
 }
